@@ -1,0 +1,9 @@
+Greedy(C){//C是问题的输入集合即候选集合
+ S={};//初始解集合为空集
+ while(notSolution(S)){//集合S没有构成问题的一个可行解
+ x=Select(C);//在候选集合C中做贪心算法
+ S=S+{x};
+ C=C-{Collection(x)};//减去一个与x关联的集合
+ }
+ return S;
+}
